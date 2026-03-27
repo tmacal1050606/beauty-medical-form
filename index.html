@@ -9,8 +9,8 @@
   :root {
     --cream: #FAF7F2;
     --warm-white: #FFFDF9;
-    --ink: #1A1510;
-    --ink-light: #4A3F35;
+    --ink: #0D1B3E;
+    --ink-light: #2E4070;
     --accent: #8B4513;
     --accent-light: #C4783A;
     --accent-pale: #F5E6D8;
@@ -444,7 +444,7 @@
 <div class="page-header">
   <div class="org-name">中華民國醫師公會全國聯合會</div>
   <div class="page-title">特定美容醫學處置及美容醫學手術<br>案例審查委員推薦表</div>
-  <div class="page-subtitle">美容醫學工作小組審查分組</div>
+  <div class="page-subtitle">美容醫學工作小組・審查執行組委員推薦</div>
 </div>
 
 <div class="container">
@@ -452,23 +452,23 @@
   <div class="notice-card">
     <div class="notice-title">📋 填表注意事項</div>
     <ul class="notice-list">
-      <li>委員均為無給職，出席審查得支給出席費及差旅費</li>
-      <li>委員任期與本會當屆理監事任期相同</li>
-      <li>審查作業以集中到會審查為原則，依本會安排之時間及地點到場執行審查</li>
-      <li>同一人選得跨類別推薦，請於審查類別欄位勾選所有適用項目</li>
+      <li>委員均為無給職，出席審查得支給出席費及差旅費。</li>
+      <li>委員任期與全聯會當屆理監事任期相同。</li>
+      <li>推薦名單將作為遴選之參考，最終委員人選仍由本會理事長依整體需求遴聘之。</li>
+      <li>【審查執行組】同一人選得跨類別推薦，請勾選所有適用的審查類別。</li>
     </ul>
   </div>
 
   <div class="tab-switcher">
     <button class="tab-btn active" onclick="switchTab('committee')">
-      審查委員會委員（1名）
+      工作小組委員（1名）
     </button>
     <button class="tab-btn" onclick="switchTab('review')">
-      審查小組委員（若干名）
+      審查執行組委員（若干名）
     </button>
   </div>
 
-  <!-- Tab 1: 委員會委員 (1名) -->
+  <!-- Tab 1: 工作小組委員 (1名) -->
   <div id="tab-committee" class="form-section active">
     <form id="form-committee" onsubmit="handleSubmit(event, 'committee')">
 
@@ -553,7 +553,22 @@
       </div>
 
       <div class="card">
-        <div class="card-title"><span class="icon">🏛</span>推薦單位</div>
+        <div class="card-title"><span class="icon">✦</span>參與意願 / 專長領域</div>
+        <div class="field-group">
+          <label class="field-label">請勾選有意願參與或具相關專長之業務領域（可複選）</label>
+          <div style="display:flex; flex-direction:column; gap:8px; margin-top:6px;">
+            <label class="check-item"><input type="checkbox"><span>案例審查</span></label>
+            <label class="check-item"><input type="checkbox"><span>課程規劃與開課資格審議</span></label>
+            <label class="check-item"><input type="checkbox"><span>診所品質認證</span></label>
+          </div>
+        </div>
+        <div style="background:#F5F0E8; border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:10px 14px; margin-top:4px; font-size:12px; color:var(--ink-light); line-height:1.8;">
+          ⚠️ <strong>注意：</strong>勾選上述選項僅供參考，<strong>不代表</strong>最終即分配至該分組。實際分組將由召集委員視業務需求及委員專長綜合考量後指派。
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon">🏛</span>推薦單位（各部定專科醫學會 / 美容醫學相關學會 / 全聯會）</div>
         <div class="referrer-card">
           <div class="field-row col-3">
             <div class="field-group">
@@ -580,7 +595,7 @@
     </form>
   </div>
 
-  <!-- Tab 2: 審查小組委員 (若干名) -->
+  <!-- Tab 2: 審查執行組委員 (若干名) -->
   <div id="tab-review" class="form-section">
     <form id="form-review" onsubmit="handleSubmit(event, 'review')">
 
@@ -590,7 +605,7 @@
       <button type="button" class="add-row-btn" onclick="addCandidate()">＋ 新增被推薦人</button>
 
       <div class="card" style="margin-top:20px;">
-        <div class="card-title"><span class="icon">🏛</span>推薦單位</div>
+        <div class="card-title"><span class="icon">🏛</span>推薦單位（各部定專科醫學會 / 美容醫學相關學會 / 全聯會）</div>
         <div class="referrer-card">
           <div class="field-row col-3">
             <div class="field-group">
