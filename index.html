@@ -442,9 +442,7 @@
 <body>
 
 <div class="page-header">
-  <div class="org-name">中華民國醫師公會全國聯合會</div>
-  <div class="page-title">特定美容醫學處置及美容醫學手術<br>案例審查委員推薦表</div>
-  <div class="page-subtitle">美容醫學工作小組・審查執行組委員推薦</div>
+  <div class="page-title">中華民國醫師公會全國聯合會<br>美容醫學工作小組／審查執行組<br>委員推薦表</div>
 </div>
 
 <div class="container">
@@ -529,18 +527,18 @@
       </div>
 
       <div class="card">
-        <div class="card-title"><span class="icon">🕐</span>方便審查的時間（請勾選，可複選）</div>
-        <div class="checkbox-grid">
-          <label class="check-item"><input type="checkbox"><span>週一 下午</span></label>
-          <label class="check-item"><input type="checkbox"><span>週二 下午</span></label>
-          <label class="check-item"><input type="checkbox"><span>週三 下午</span></label>
-          <label class="check-item"><input type="checkbox"><span>週四 下午</span></label>
-          <label class="check-item"><input type="checkbox"><span>週五 下午</span></label>
-          <label class="check-item"><input type="checkbox"><span>其他時間</span></label>
+        <div class="card-title"><span class="icon">🕐</span>方便開會的時間（請勾選，可複選）<span class="req"> *</span></div>
+        <div class="checkbox-grid" id="committee-time-group">
+          <label class="check-item"><input type="checkbox" name="comm_time" value="週一 下午"><span>週一 下午</span></label>
+          <label class="check-item"><input type="checkbox" name="comm_time" value="週二 下午"><span>週二 下午</span></label>
+          <label class="check-item"><input type="checkbox" name="comm_time" value="週三 下午"><span>週三 下午</span></label>
+          <label class="check-item"><input type="checkbox" name="comm_time" value="週四 下午"><span>週四 下午</span></label>
+          <label class="check-item"><input type="checkbox" name="comm_time" value="週五 下午"><span>週五 下午</span></label>
+          <label class="check-item"><input type="checkbox" name="comm_time" value="其他時間"><span>其他時間</span></label>
         </div>
         <div class="field-group" style="margin-top:12px;">
           <label class="field-label">其他時間說明</label>
-          <input type="text" class="field-input" placeholder="請說明其他方便時間">
+          <input type="text" class="field-input" id="comm-other-time" placeholder="請說明其他方便時間">
         </div>
       </div>
 
@@ -553,13 +551,13 @@
       </div>
 
       <div class="card">
-        <div class="card-title"><span class="icon">✦</span>參與意願 / 專長領域</div>
+        <div class="card-title"><span class="icon">✦</span>參與意願 / 專長領域 <span class="req">*</span></div>
         <div class="field-group">
           <label class="field-label">請勾選有意願參與或具相關專長之業務領域（可複選）</label>
-          <div style="display:flex; flex-direction:column; gap:8px; margin-top:6px;">
-            <label class="check-item"><input type="checkbox"><span>案例審查</span></label>
-            <label class="check-item"><input type="checkbox"><span>課程規劃與開課資格審議</span></label>
-            <label class="check-item"><input type="checkbox"><span>診所品質認證</span></label>
+          <div style="display:flex; flex-direction:column; gap:8px; margin-top:6px;" id="committee-interest-group">
+            <label class="check-item"><input type="checkbox" name="comm_interest" value="案例審查"><span>案例審查</span></label>
+            <label class="check-item"><input type="checkbox" name="comm_interest" value="課程規劃與開課資格審議"><span>課程規劃與開課資格審議</span></label>
+            <label class="check-item"><input type="checkbox" name="comm_interest" value="診所品質認證"><span>診所品質認證</span></label>
           </div>
         </div>
         <div style="background:#F5F0E8; border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:10px 14px; margin-top:4px; font-size:12px; color:var(--ink-light); line-height:1.8;">
@@ -732,28 +730,28 @@
         </div>
 
         <div class="field-group" style="margin-top:4px;">
-          <label class="field-label">方便審查的時間（請勾選，可複選）</label>
+          <label class="field-label">方便審查的時間（請勾選，可複選）<span class="req"> *</span></label>
           <div class="checkbox-grid">
-            <label class="check-item"><input type="checkbox"><span>週一 下午</span></label>
-            <label class="check-item"><input type="checkbox"><span>週二 下午</span></label>
-            <label class="check-item"><input type="checkbox"><span>週三 下午</span></label>
-            <label class="check-item"><input type="checkbox"><span>週四 下午</span></label>
-            <label class="check-item"><input type="checkbox"><span>週五 下午</span></label>
-            <label class="check-item"><input type="checkbox"><span>其他時間</span></label>
+            <label class="check-item"><input type="checkbox" name="review_time_${idx}" value="週一 下午"><span>週一 下午</span></label>
+            <label class="check-item"><input type="checkbox" name="review_time_${idx}" value="週二 下午"><span>週二 下午</span></label>
+            <label class="check-item"><input type="checkbox" name="review_time_${idx}" value="週三 下午"><span>週三 下午</span></label>
+            <label class="check-item"><input type="checkbox" name="review_time_${idx}" value="週四 下午"><span>週四 下午</span></label>
+            <label class="check-item"><input type="checkbox" name="review_time_${idx}" value="週五 下午"><span>週五 下午</span></label>
+            <label class="check-item"><input type="checkbox" name="review_time_${idx}" value="其他時間"><span>其他時間</span></label>
           </div>
           <input type="text" class="field-input" style="margin-top:8px;" placeholder="其他時間請說明">
         </div>
 
         <div class="field-group">
-          <label class="field-label">學經歷簡歷</label>
-          <textarea class="field-textarea" name="bio_${idx}" placeholder="請填寫學歷、現職、重要經歷及專長等相關資料"></textarea>
+          <label class="field-label">學經歷簡歷 <span class="req">*</span></label>
+          <textarea class="field-textarea" name="bio_${idx}" placeholder="請填寫學歷、現職、重要經歷及專長等相關資料" required></textarea>
         </div>
       </div>
     </div>`;
   }
 
   // ── 請將部署後的網址貼在這裡 ──────────────────
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzSkATX-eiHEuVdwvMivMg4T6cHIQQMXX16Wj1hLDjiiKnHpwBiAock1oHOam1VTNkPHQ/exec';
+  const SCRIPT_URL = '請貼上您的網頁應用程式URL';
   // ─────────────────────────────────────────────
 
   function addCandidate() {
@@ -784,9 +782,40 @@
   async function handleSubmit(e, type) {
     e.preventDefault();
 
+    if (type === 'committee') {
+      // 驗證方便開會時間
+      const timeChecked = document.querySelectorAll('input[name="comm_time"]:checked').length > 0;
+      if (!timeChecked) {
+        alert('請至少勾選一項「方便開會的時間」');
+        return;
+      }
+      // 驗證參與意願
+      const interestChecked = document.querySelectorAll('input[name="comm_interest"]:checked').length > 0;
+      if (!interestChecked) {
+        alert('請至少勾選一項「參與意願 / 專長領域」');
+        return;
+      }
+    }
+
     if (type === 'review') {
       const rows = document.querySelectorAll('#candidates-container .candidate-row');
       if (rows.length === 0) { alert('請至少填寫一位被推薦人資料'); return; }
+      // 驗證每位被推薦人至少勾選一個審查類別與時間
+      for (const row of rows) {
+        const idx = row.id.replace('candidate-', '');
+        const catChecked = row.querySelectorAll(`input[name="cat_${idx}"]:checked`).length > 0;
+        if (!catChecked) {
+          const name = row.querySelector(`[name="name_${idx}"]`).value || `第 ${idx} 位`;
+          alert(`請為「${name}」至少勾選一項審查類別`);
+          return;
+        }
+        const timeChecked = row.querySelectorAll(`input[name="review_time_${idx}"]:checked`).length > 0;
+        if (!timeChecked) {
+          const name = row.querySelector(`[name="name_${idx}"]`).value || `第 ${idx} 位`;
+          alert(`請為「${name}」至少勾選一項方便審查的時間`);
+          return;
+        }
+      }
     }
 
     if (!SCRIPT_URL || SCRIPT_URL.includes('請貼上')) {
